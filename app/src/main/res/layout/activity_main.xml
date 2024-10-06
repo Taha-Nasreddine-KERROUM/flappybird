@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.tiho.flappybird.GameView
+        android:id="@+id/game_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/score_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@android:color/transparent"/>
+
+    <ImageView
+        android:id="@+id/img_start"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/start"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_game_over"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_game_over"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:src="@drawable/pic_gameover"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true" />
+
+
+
+        <TextView
+            android:id="@+id/txt_score_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="100sp"
+            android:textColor="#FF0000"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/txt_best_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="best: 0"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txt_score_over"
+            android:layout_marginTop="-10dp"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Touch screen to restart"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_game_over"
+            android:layout_marginTop="-20sp"
+            android:textColor="#FF0000"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/heartBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_horizontal|top">
+
+        <ImageView
+            android:id="@+id/heart1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/heart" />
+    </LinearLayout>
+
+</RelativeLayout>
